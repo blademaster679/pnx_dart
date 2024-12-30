@@ -13,6 +13,7 @@ public:
         const std::vector<double> &distortion_coefficients);
     bool solvePnP(const Detector::Light &light, cv::Mat &rvec, cv::Mat &tvec);
     float calculateDistanceToCenter(const cv::Point2f &center);
+    double getDistance(const Detector::Light &light, cv::Mat &rvec, cv::Mat &tvec);
 private:
     cv::Mat camera_matrix;
     cv::Mat distortion_coefficients;
