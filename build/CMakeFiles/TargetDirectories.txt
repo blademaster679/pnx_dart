@@ -1,0 +1,3 @@
+/home/blade_master/light_detection/build/CMakeFiles/light.dir
+/home/blade_master/light_detection/build/CMakeFiles/edit_cache.dir
+/home/blade_master/light_detection/build/CMakeFiles/rebuild_cache.dir
