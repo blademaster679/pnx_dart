@@ -42,7 +42,7 @@ double PnPSolver::getDistance(const Detector::Light &light, cv::Mat &rvec, cv::M
     image_points.emplace_back(light.bottom);
     image_points.emplace_back(light.left);
     if (cv::solvePnP(
-        circle_points, image_points, camera_matrix, distortion_coefficients, rvec, tvec, false, cv::SOLVEPNP_ITERATIVE);){
+        circle_points, image_points, camera_matrix, distortion_coefficients, rvec, tvec, false, cv::SOLVEPNP_ITERATIVE)){
             std::vector<double> tvecVec;
             tvec.copyTo(tvecVec);
             double distance = std::sqrt(tvecVec[0] * tvecVec[0] + 
