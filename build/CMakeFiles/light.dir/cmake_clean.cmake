@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/light.dir/light_detection_base.cpp.o"
-  "CMakeFiles/light.dir/light_detection_base.cpp.o.d"
   "CMakeFiles/light.dir/main.cpp.o"
   "CMakeFiles/light.dir/main.cpp.o.d"
+  "CMakeFiles/light.dir/src/light_detection_base.cpp.o"
+  "CMakeFiles/light.dir/src/light_detection_base.cpp.o.d"
   "light"
   "light.pdb"
 )

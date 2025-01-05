@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/blade_master/light_detection
+CMAKE_SOURCE_DIR = /home/blade_master/pnx_dart/pnx_dart
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/blade_master/light_detection/build
+CMAKE_BINARY_DIR = /home/blade_master/pnx_dart/pnx_dart/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/light.dir/depend.make
@@ -72,41 +72,41 @@ include CMakeFiles/light.dir/flags.make
 CMakeFiles/light.dir/main.cpp.o: CMakeFiles/light.dir/flags.make
 CMakeFiles/light.dir/main.cpp.o: ../main.cpp
 CMakeFiles/light.dir/main.cpp.o: CMakeFiles/light.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blade_master/light_detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/light.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/light.dir/main.cpp.o -MF CMakeFiles/light.dir/main.cpp.o.d -o CMakeFiles/light.dir/main.cpp.o -c /home/blade_master/light_detection/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/light.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/light.dir/main.cpp.o -MF CMakeFiles/light.dir/main.cpp.o.d -o CMakeFiles/light.dir/main.cpp.o -c /home/blade_master/pnx_dart/pnx_dart/main.cpp
 
 CMakeFiles/light.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/light.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/blade_master/light_detection/main.cpp > CMakeFiles/light.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/blade_master/pnx_dart/pnx_dart/main.cpp > CMakeFiles/light.dir/main.cpp.i
 
 CMakeFiles/light.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/light.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blade_master/light_detection/main.cpp -o CMakeFiles/light.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blade_master/pnx_dart/pnx_dart/main.cpp -o CMakeFiles/light.dir/main.cpp.s
 
-CMakeFiles/light.dir/light_detection_base.cpp.o: CMakeFiles/light.dir/flags.make
-CMakeFiles/light.dir/light_detection_base.cpp.o: ../light_detection_base.cpp
-CMakeFiles/light.dir/light_detection_base.cpp.o: CMakeFiles/light.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blade_master/light_detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/light.dir/light_detection_base.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/light.dir/light_detection_base.cpp.o -MF CMakeFiles/light.dir/light_detection_base.cpp.o.d -o CMakeFiles/light.dir/light_detection_base.cpp.o -c /home/blade_master/light_detection/light_detection_base.cpp
+CMakeFiles/light.dir/src/light_detection_base.cpp.o: CMakeFiles/light.dir/flags.make
+CMakeFiles/light.dir/src/light_detection_base.cpp.o: ../src/light_detection_base.cpp
+CMakeFiles/light.dir/src/light_detection_base.cpp.o: CMakeFiles/light.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/light.dir/src/light_detection_base.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/light.dir/src/light_detection_base.cpp.o -MF CMakeFiles/light.dir/src/light_detection_base.cpp.o.d -o CMakeFiles/light.dir/src/light_detection_base.cpp.o -c /home/blade_master/pnx_dart/pnx_dart/src/light_detection_base.cpp
 
-CMakeFiles/light.dir/light_detection_base.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/light.dir/light_detection_base.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/blade_master/light_detection/light_detection_base.cpp > CMakeFiles/light.dir/light_detection_base.cpp.i
+CMakeFiles/light.dir/src/light_detection_base.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/light.dir/src/light_detection_base.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/blade_master/pnx_dart/pnx_dart/src/light_detection_base.cpp > CMakeFiles/light.dir/src/light_detection_base.cpp.i
 
-CMakeFiles/light.dir/light_detection_base.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/light.dir/light_detection_base.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blade_master/light_detection/light_detection_base.cpp -o CMakeFiles/light.dir/light_detection_base.cpp.s
+CMakeFiles/light.dir/src/light_detection_base.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/light.dir/src/light_detection_base.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blade_master/pnx_dart/pnx_dart/src/light_detection_base.cpp -o CMakeFiles/light.dir/src/light_detection_base.cpp.s
 
 # Object files for target light
 light_OBJECTS = \
 "CMakeFiles/light.dir/main.cpp.o" \
-"CMakeFiles/light.dir/light_detection_base.cpp.o"
+"CMakeFiles/light.dir/src/light_detection_base.cpp.o"
 
 # External object files for target light
 light_EXTERNAL_OBJECTS =
 
 light: CMakeFiles/light.dir/main.cpp.o
-light: CMakeFiles/light.dir/light_detection_base.cpp.o
+light: CMakeFiles/light.dir/src/light_detection_base.cpp.o
 light: CMakeFiles/light.dir/build.make
 light: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
 light: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.5.4d
@@ -163,7 +163,7 @@ light: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 light: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 light: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
 light: CMakeFiles/light.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/blade_master/light_detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable light"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable light"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/light.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/light.dir/clean:
 .PHONY : CMakeFiles/light.dir/clean
 
 CMakeFiles/light.dir/depend:
-	cd /home/blade_master/light_detection/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/blade_master/light_detection /home/blade_master/light_detection /home/blade_master/light_detection/build /home/blade_master/light_detection/build /home/blade_master/light_detection/build/CMakeFiles/light.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/blade_master/pnx_dart/pnx_dart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/blade_master/pnx_dart/pnx_dart /home/blade_master/pnx_dart/pnx_dart /home/blade_master/pnx_dart/pnx_dart/build /home/blade_master/pnx_dart/pnx_dart/build /home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles/light.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/light.dir/depend
 

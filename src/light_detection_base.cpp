@@ -1,4 +1,4 @@
-#include "light_detection_base.hpp"
+#include "include/light_detection_base.hpp"
 
 cv::Mat Detector::binary_image(const cv::Mat &color_image){
     if (color_image.type() != CV_8UC3 && color_image.type() != CV_8UC4){

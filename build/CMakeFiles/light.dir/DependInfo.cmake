@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/blade_master/light_detection/light_detection_base.cpp" "CMakeFiles/light.dir/light_detection_base.cpp.o" "gcc" "CMakeFiles/light.dir/light_detection_base.cpp.o.d"
-  "/home/blade_master/light_detection/main.cpp" "CMakeFiles/light.dir/main.cpp.o" "gcc" "CMakeFiles/light.dir/main.cpp.o.d"
+  "/home/blade_master/pnx_dart/pnx_dart/main.cpp" "CMakeFiles/light.dir/main.cpp.o" "gcc" "CMakeFiles/light.dir/main.cpp.o.d"
+  "/home/blade_master/pnx_dart/pnx_dart/src/light_detection_base.cpp" "CMakeFiles/light.dir/src/light_detection_base.cpp.o" "gcc" "CMakeFiles/light.dir/src/light_detection_base.cpp.o.d"
   )
 
 # Targets to which this target links.

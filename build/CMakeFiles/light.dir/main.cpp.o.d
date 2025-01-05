@@ -1,5 +1,5 @@
 CMakeFiles/light.dir/main.cpp.o: \
- /home/blade_master/light_detection/main.cpp /usr/include/stdc-predef.h \
+ /home/blade_master/pnx_dart/pnx_dart/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -348,4 +348,4 @@ CMakeFiles/light.dir/main.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
- /home/blade_master/light_detection/light_detection_base.hpp
+ /home/blade_master/pnx_dart/pnx_dart/include/light_detection_base.hpp
