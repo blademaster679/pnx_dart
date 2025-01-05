@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/blade_master/pnx_dart/pnx_dart
+CMAKE_SOURCE_DIR = /home/blade_master/pnx_dart
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/blade_master/pnx_dart/pnx_dart/build
+CMAKE_BINARY_DIR = /home/blade_master/pnx_dart/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles /home/blade_master/pnx_dart/pnx_dart/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/blade_master/pnx_dart/build/CMakeFiles /home/blade_master/pnx_dart/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/blade_master/pnx_dart/pnx_dart/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/blade_master/pnx_dart/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ src/light_detection_base.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/light_detection_base.cpp.s
 .PHONY : src/light_detection_base.cpp.s
 
+src/pnp_solver.o: src/pnp_solver.cpp.o
+.PHONY : src/pnp_solver.o
+
+# target to build an object file
+src/pnp_solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.o
+.PHONY : src/pnp_solver.cpp.o
+
+src/pnp_solver.i: src/pnp_solver.cpp.i
+.PHONY : src/pnp_solver.i
+
+# target to preprocess a source file
+src/pnp_solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.i
+.PHONY : src/pnp_solver.cpp.i
+
+src/pnp_solver.s: src/pnp_solver.cpp.s
+.PHONY : src/pnp_solver.s
+
+# target to generate assembly for a file
+src/pnp_solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.s
+.PHONY : src/pnp_solver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/light_detection_base.o"
 	@echo "... src/light_detection_base.i"
 	@echo "... src/light_detection_base.s"
+	@echo "... src/pnp_solver.o"
+	@echo "... src/pnp_solver.i"
+	@echo "... src/pnp_solver.s"
 .PHONY : help
 
 

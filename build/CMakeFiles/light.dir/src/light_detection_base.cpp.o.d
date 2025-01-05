@@ -1,7 +1,7 @@
 CMakeFiles/light.dir/src/light_detection_base.cpp.o: \
- /home/blade_master/pnx_dart/pnx_dart/src/light_detection_base.cpp \
+ /home/blade_master/pnx_dart/src/light_detection_base.cpp \
  /usr/include/stdc-predef.h \
- /home/blade_master/pnx_dart/pnx_dart/include/light_detection_base.hpp \
+ /home/blade_master/pnx_dart/include/light_detection_base.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
