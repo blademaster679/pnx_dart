@@ -27,9 +27,11 @@ int main(){
     std::vector<double> dist_coeffs = {0.0, 0.0, 0.0, 0.0, 0.0};
     PnPSolver solver(camera_matrix, dist_coeffs);
     cv::Mat rvec, tvec;
+    double distance, angle;
     for (const auto& light : lights){
         if (solver.solvePnP(light, rvec, tvec)){
-            solver.getDistance(light, rvec, tvec);
+            distance = solver.getDistance(light, rvec, tvec);
+            angle = solver.getAngle(light, rvec, tvec);
         }
     }
 

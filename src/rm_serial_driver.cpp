@@ -72,7 +72,7 @@ void RMSerialDriver::getParams()//使用configyaml替换
   auto pt = Parity::NONE;
   auto sb = StopBits::ONE;
   //加载参数文件
-  YAML::Node config = YAML::LoadFile("/home/pnx/training_code/config.yaml");//飞镖需要修改
+  YAML::Node config = YAML::LoadFile("/home/blade_master/pnx_dart/config.yaml");//飞镖需要修改
   std::cout << "config.yaml loaded" << std::endl;
   //读取参数
   timestamp_offset_ = config["serialdriver"]["timestamp_offset"].as<double>();

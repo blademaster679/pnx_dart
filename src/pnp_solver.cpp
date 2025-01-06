@@ -56,3 +56,24 @@ double PnPSolver::getDistance(const Detector::Light &light, cv::Mat &rvec, cv::M
         return -1;
     }
 }
+
+double PnPSolver::getAngle(const Detector::Light &light, cv::Mat &rvec, cv::Mat &tvec){
+    std::vector<cv::Point2f> image_points;
+    image_points.emplace_back(light.center);
+    image_points.emplace_back(light.top);
+    image_points.emplace_back(light.right);
+    image_points.emplace_back(light.bottom);
+    image_points.emplace_back(light.left);
+    if (cv::solvePnP(
+        circle_points, image_points, camera_matrix, distortion_coefficients, rvec, tvec, false, cv::SOLVEPNP_ITERATIVE)){
+            std::vector<double> tvecVec;
+            tvec.copyTo(tvecVec);
+            double angle = atan2(tvecVec[0],tvecVec[1]);
+            std::cout << "angle from the to the object: " << angle << std::endl;
+            return angle;
+        }
+        else{
+        std::cerr << "solvePnP failed to find a solution." << std::endl;
+        return -1;
+    }
+}
