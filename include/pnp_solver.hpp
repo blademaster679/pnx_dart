@@ -15,6 +15,8 @@ public:
     float calculateDistanceToCenter(const cv::Point2f &center);
     double getDistance(const Detector::Light &light, cv::Mat &rvec, cv::Mat &tvec);
     double getAngle(const Detector::Light &light, cv::Mat &rvec, cv::Mat &tvec);
+    double distance;
+    double angle;
 private:
     cv::Mat camera_matrix;
     cv::Mat distortion_coefficients;

@@ -20,7 +20,7 @@
 #include "../include/crc.hpp"
 #include "../include/packet.hpp"
 #include "../include/rm_serial_driver.hpp"
-
+#include "../include/message.hpp"
 
 
 namespace rm_serial_driver
@@ -169,7 +169,7 @@ void RMSerialDriver::reopenPort()
     }
 }
 
-void RMSerialDriver::sendData(const rm_auto_aim::Ballistic::firemsg &msg)//飞镖需要对应更改，发送的相关数据 
+void RMSerialDriver::sendData(const rm_dart::message &msg)//飞镖需要对应更改，发送的相关数据 
 {
   const static std::map<std::string, uint8_t> id_unit8_map{
     {"", 0},  {"outpost", 0}, {"1", 1}, {"1", 1},     {"2", 2},
@@ -177,10 +177,9 @@ void RMSerialDriver::sendData(const rm_auto_aim::Ballistic::firemsg &msg)//飞�
 
   try {
     SendPacket packet;
-    packet.tracking = msg.tracking;
-    packet.id = id_unit8_map.at(msg.id);
-    packet.pitch = msg.pitch;
-    packet.yaw = msg.yaw;
+    packet.angle = msg.angle;
+    packet.distance = msg.distance;
+    
 
     crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));
 
