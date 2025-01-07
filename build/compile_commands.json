@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/blade_master/pnx_dart/build",
+  "command": "/usr/bin/c++ -DCERES_EXPORT_INTERNAL_SYMBOLS -DGFLAGS_IS_A_DLL=0 -DGOOGLE_GLOG_DLL_DECL=\"\" -DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=\"\" -I/home/blade_master/pnx_dart/cameraOpen/include -I/home/blade_master/pnx_dart/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/blade_master/pnx_dart/main.cpp",
+  "file": "/home/blade_master/pnx_dart/main.cpp"
+},
+{
+  "directory": "/home/blade_master/pnx_dart/build",
+  "command": "/usr/bin/c++ -DCERES_EXPORT_INTERNAL_SYMBOLS -DGFLAGS_IS_A_DLL=0 -DGOOGLE_GLOG_DLL_DECL=\"\" -DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=\"\" -I/home/blade_master/pnx_dart/cameraOpen/include -I/home/blade_master/pnx_dart/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/main.dir/src/crc.cpp.o -c /home/blade_master/pnx_dart/src/crc.cpp",
+  "file": "/home/blade_master/pnx_dart/src/crc.cpp"
+},
+{
+  "directory": "/home/blade_master/pnx_dart/build",
+  "command": "/usr/bin/c++ -DCERES_EXPORT_INTERNAL_SYMBOLS -DGFLAGS_IS_A_DLL=0 -DGOOGLE_GLOG_DLL_DECL=\"\" -DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=\"\" -I/home/blade_master/pnx_dart/cameraOpen/include -I/home/blade_master/pnx_dart/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/main.dir/src/light_detection_base.cpp.o -c /home/blade_master/pnx_dart/src/light_detection_base.cpp",
+  "file": "/home/blade_master/pnx_dart/src/light_detection_base.cpp"
+},
+{
+  "directory": "/home/blade_master/pnx_dart/build",
+  "command": "/usr/bin/c++ -DCERES_EXPORT_INTERNAL_SYMBOLS -DGFLAGS_IS_A_DLL=0 -DGOOGLE_GLOG_DLL_DECL=\"\" -DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=\"\" -I/home/blade_master/pnx_dart/cameraOpen/include -I/home/blade_master/pnx_dart/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/main.dir/src/pnp_solver.cpp.o -c /home/blade_master/pnx_dart/src/pnp_solver.cpp",
+  "file": "/home/blade_master/pnx_dart/src/pnp_solver.cpp"
+},
+{
+  "directory": "/home/blade_master/pnx_dart/build",
+  "command": "/usr/bin/c++ -DCERES_EXPORT_INTERNAL_SYMBOLS -DGFLAGS_IS_A_DLL=0 -DGOOGLE_GLOG_DLL_DECL=\"\" -DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=\"\" -I/home/blade_master/pnx_dart/cameraOpen/include -I/home/blade_master/pnx_dart/include -isystem /usr/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/main.dir/src/rm_serial_driver.cpp.o -c /home/blade_master/pnx_dart/src/rm_serial_driver.cpp",
+  "file": "/home/blade_master/pnx_dart/src/rm_serial_driver.cpp"
+}
+]

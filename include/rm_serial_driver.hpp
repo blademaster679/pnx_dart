@@ -8,6 +8,7 @@
 
 
 #include <serial_driver/serial_driver.hpp>
+#include "message.hpp"
 
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
@@ -37,7 +38,7 @@ public:
   
   void reopenPort();
 
-  void sendData(const const rm_dart::message &msg);
+  void sendData(const rm_dart::message &msg);
 
  
 

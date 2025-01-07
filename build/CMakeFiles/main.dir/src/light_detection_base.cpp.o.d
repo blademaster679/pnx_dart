@@ -1,4 +1,4 @@
-CMakeFiles/light.dir/src/light_detection_base.cpp.o: \
+CMakeFiles/main.dir/src/light_detection_base.cpp.o: \
  /home/blade_master/pnx_dart/src/light_detection_base.cpp \
  /usr/include/stdc-predef.h \
  /home/blade_master/pnx_dart/include/light_detection_base.hpp \

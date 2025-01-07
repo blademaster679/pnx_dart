@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named light
+# Target rules for targets named main
 
 # Build rule for target.
-light: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 light
-.PHONY : light
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-light/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/build
-.PHONY : light/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,15 +150,39 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/crc.o: src/crc.cpp.o
+.PHONY : src/crc.o
+
+# target to build an object file
+src/crc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/crc.cpp.o
+.PHONY : src/crc.cpp.o
+
+src/crc.i: src/crc.cpp.i
+.PHONY : src/crc.i
+
+# target to preprocess a source file
+src/crc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/crc.cpp.i
+.PHONY : src/crc.cpp.i
+
+src/crc.s: src/crc.cpp.s
+.PHONY : src/crc.s
+
+# target to generate assembly for a file
+src/crc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/crc.cpp.s
+.PHONY : src/crc.cpp.s
 
 src/light_detection_base.o: src/light_detection_base.cpp.o
 .PHONY : src/light_detection_base.o
 
 # target to build an object file
 src/light_detection_base.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/light_detection_base.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/light_detection_base.cpp.o
 .PHONY : src/light_detection_base.cpp.o
 
 src/light_detection_base.i: src/light_detection_base.cpp.i
@@ -166,7 +190,7 @@ src/light_detection_base.i: src/light_detection_base.cpp.i
 
 # target to preprocess a source file
 src/light_detection_base.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/light_detection_base.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/light_detection_base.cpp.i
 .PHONY : src/light_detection_base.cpp.i
 
 src/light_detection_base.s: src/light_detection_base.cpp.s
@@ -174,7 +198,7 @@ src/light_detection_base.s: src/light_detection_base.cpp.s
 
 # target to generate assembly for a file
 src/light_detection_base.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/light_detection_base.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/light_detection_base.cpp.s
 .PHONY : src/light_detection_base.cpp.s
 
 src/pnp_solver.o: src/pnp_solver.cpp.o
@@ -182,7 +206,7 @@ src/pnp_solver.o: src/pnp_solver.cpp.o
 
 # target to build an object file
 src/pnp_solver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp_solver.cpp.o
 .PHONY : src/pnp_solver.cpp.o
 
 src/pnp_solver.i: src/pnp_solver.cpp.i
@@ -190,7 +214,7 @@ src/pnp_solver.i: src/pnp_solver.cpp.i
 
 # target to preprocess a source file
 src/pnp_solver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp_solver.cpp.i
 .PHONY : src/pnp_solver.cpp.i
 
 src/pnp_solver.s: src/pnp_solver.cpp.s
@@ -198,8 +222,32 @@ src/pnp_solver.s: src/pnp_solver.cpp.s
 
 # target to generate assembly for a file
 src/pnp_solver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/light.dir/build.make CMakeFiles/light.dir/src/pnp_solver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp_solver.cpp.s
 .PHONY : src/pnp_solver.cpp.s
+
+src/rm_serial_driver.o: src/rm_serial_driver.cpp.o
+.PHONY : src/rm_serial_driver.o
+
+# target to build an object file
+src/rm_serial_driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rm_serial_driver.cpp.o
+.PHONY : src/rm_serial_driver.cpp.o
+
+src/rm_serial_driver.i: src/rm_serial_driver.cpp.i
+.PHONY : src/rm_serial_driver.i
+
+# target to preprocess a source file
+src/rm_serial_driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rm_serial_driver.cpp.i
+.PHONY : src/rm_serial_driver.cpp.i
+
+src/rm_serial_driver.s: src/rm_serial_driver.cpp.s
+.PHONY : src/rm_serial_driver.s
+
+# target to generate assembly for a file
+src/rm_serial_driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rm_serial_driver.cpp.s
+.PHONY : src/rm_serial_driver.cpp.s
 
 # Help Target
 help:
@@ -209,16 +257,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... light"
+	@echo "... main"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/crc.o"
+	@echo "... src/crc.i"
+	@echo "... src/crc.s"
 	@echo "... src/light_detection_base.o"
 	@echo "... src/light_detection_base.i"
 	@echo "... src/light_detection_base.s"
 	@echo "... src/pnp_solver.o"
 	@echo "... src/pnp_solver.i"
 	@echo "... src/pnp_solver.s"
+	@echo "... src/rm_serial_driver.o"
+	@echo "... src/rm_serial_driver.i"
+	@echo "... src/rm_serial_driver.s"
 .PHONY : help
 
 
