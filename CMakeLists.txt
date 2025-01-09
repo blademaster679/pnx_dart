@@ -24,6 +24,7 @@ find_package(OpenCV REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Eigen3 3.3 REQUIRED )
 find_package(Ceres REQUIRED)
+find_package(rclcpp REQUIRED)
 
 # add the executable 添加可执行文件
 add_executable(main main.cpp ${DETECTOR_FILES})
@@ -41,3 +42,5 @@ target_link_libraries(main
     ${PROJECT_SOURCE_DIR}/lib/libio_context.so
     ${PROJECT_SOURCE_DIR}/lib/libserial_driver_nodes.so
 )
+
+ament_target_dependencies(main rclcpp)

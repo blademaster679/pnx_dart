@@ -14,7 +14,7 @@ detector:
   dist_coeff: [-2.8380073561710410e-02, -1.1630629792065648e-01, 0., 0.,
        4.4214145035365970e-01]
 
-serialdriver: 
+serialdriver:
   timestamp_offset: 0.006
   device_name: /dev/ttyACM0
   baud_rate: 115200

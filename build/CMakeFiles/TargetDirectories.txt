@@ -1,3 +1,6 @@
+/home/blade_master/pnx_dart/build/CMakeFiles/uninstall.dir
+/home/blade_master/pnx_dart/build/CMakeFiles/pnx_dart_uninstall.dir
 /home/blade_master/pnx_dart/build/CMakeFiles/main.dir
+/home/blade_master/pnx_dart/build/CMakeFiles/test.dir
 /home/blade_master/pnx_dart/build/CMakeFiles/edit_cache.dir
 /home/blade_master/pnx_dart/build/CMakeFiles/rebuild_cache.dir

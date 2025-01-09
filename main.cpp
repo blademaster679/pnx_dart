@@ -274,7 +274,7 @@ void videoGet()
 // 处理视频帧图像，进行目标检测，计算距离和角度，发送数据
 void processFrames(){
     Detector detector;
-    YAML::Node config = YAML::LoadFile("config.yaml");
+    YAML::Node config = YAML::LoadFile("/home/blade_master/pnx_dart/config.yaml");
     std::array<double,9> camera_matrix_data;
     int i = 0;
     for (const auto& row : config["detector"]["camera_matrix"]) {
@@ -304,13 +304,13 @@ void processFrames(){
         std::vector<Detector::Light> lights = detector.find_lights(color_image, binary_image);
         std::cout << "lights size: " << lights.size() << std::endl;
         cv::imshow("binary_image", binary_image);
-        cv::waitKey(0);
+        cv::waitKey(1);
         for (const auto& light : lights){
             cv::circle(color_image, light.center, light.width/2 , cv::Scalar(0, 0, 255), 2);
         }
         cv::imshow("Detected lights", color_image);
         cv::imwrite("Detected_lights.jpg", color_image);
-        cv::waitKey(0);
+        cv::waitKey(1);
         for (const auto& light : lights){
             if (solver.solvePnP(light, rvec, tvec)){
                 distance = solver.getDistance(light, rvec, tvec);
