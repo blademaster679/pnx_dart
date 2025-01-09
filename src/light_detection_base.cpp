@@ -6,18 +6,18 @@ cv::Mat Detector::binary_image(const cv::Mat &color_image){
     }
     cv::Mat grey_image;//convert color image to grey image
     cv::cvtColor(color_image, grey_image, cv::COLOR_BGR2GRAY);
-    cv::imshow("grey_image", grey_image);//调试
-    cv::waitKey(0);
+    // cv::imshow("grey_image", grey_image);//调试
+    // cv::waitKey(0);
     cv::Mat binary_image;//convert grey image to binary image
     cv::threshold(grey_image, binary_image, binary_threshold, 255, cv::THRESH_BINARY);
-    cv::imshow("binary_image", binary_image);//调试
-    cv::waitKey(0);
+    // cv::imshow("binary_image", binary_image);//调试
+    // cv::waitKey(0);
     cv::Mat gradient_image;//close operation to binary image 形态学操作
     int kernal_size = 3;
     cv::Mat element = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(kernal_size, kernal_size));
     cv::morphologyEx(binary_image, gradient_image, cv::MORPH_CLOSE, element); 
-    cv::imshow("gradient_image", gradient_image);//调试
-    cv::waitKey(0);
+    // cv::imshow("gradient_image", gradient_image);//调试
+    // cv::waitKey(0);
     return gradient_image;
 }
 

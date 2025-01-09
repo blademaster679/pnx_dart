@@ -303,14 +303,14 @@ void processFrames(){
         cv::Mat binary_image = detector.binary_image(color_image);
         std::vector<Detector::Light> lights = detector.find_lights(color_image, binary_image);
         std::cout << "lights size: " << lights.size() << std::endl;
-        cv::imshow("binary_image", binary_image);
-        cv::waitKey(1);
+        // cv::imshow("binary_image", binary_image);
+        // cv::waitKey(1);
         for (const auto& light : lights){
             cv::circle(color_image, light.center, light.width/2 , cv::Scalar(0, 0, 255), 2);
         }
-        cv::imshow("Detected lights", color_image);
+        // cv::imshow("Detected lights", color_image);
         cv::imwrite("Detected_lights.jpg", color_image);
-        cv::waitKey(1);
+        //cv::waitKey(1);
         for (const auto& light : lights){
             if (solver.solvePnP(light, rvec, tvec)){
                 distance = solver.getDistance(light, rvec, tvec);
