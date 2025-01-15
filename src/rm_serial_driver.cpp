@@ -171,14 +171,15 @@ void RMSerialDriver::reopenPort()
 
 void RMSerialDriver::sendData(const rm_dart::message &msg)//飞镖需要对应更改，发送的相关数据 
 {
-  const static std::map<std::string, uint8_t> id_unit8_map{
-    {"", 0},  {"outpost", 0}, {"1", 1}, {"1", 1},     {"2", 2},
-    {"3", 3}, {"4", 4},       {"5", 5}, {"guard", 6}, {"base", 7}};
+  // const static std::map<std::string, uint8_t> id_unit8_map{
+  //   {"", 0},  {"outpost", 0}, {"1", 1}, {"1", 1},     {"2", 2},
+  //   {"3", 3}, {"4", 4},       {"5", 5}, {"guard", 6}, {"base", 7}};
 
   try {
     SendPacket packet;
     packet.angle = msg.angle;
-    packet.distance = msg.distance;
+    // packet.distance = msg.distance;
+    packet.distance_int8 = static_cast<uint8_t>(std::round(msg.distance));
     
 
     crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));

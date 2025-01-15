@@ -27,8 +27,9 @@ struct SendPacket //飞镖需要对应更改
   uint8_t id : 3;          // 0-outpost 6-guard 7-base
   uint8_t reserved : 4;
   
-  double distance;
+  // double distance;
   double angle;
+  uint8_t distance_int8;
   
 
 

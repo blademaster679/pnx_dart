@@ -1,0 +1,55 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9644f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9644f.dir/build.make CMakeFiles/cmTC_9644f.dir/build
+gmake[1]: Entering directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9644f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_9644f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9644f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9644f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_9644f.dir/CheckFunctionExists.c.o -o cmTC_9644f 
+/usr/bin/ld: CMakeFiles/cmTC_9644f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_9644f.dir/build.make:99: cmTC_9644f] Error 1
+gmake[1]: Leaving directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9644f/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_659ca/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_659ca.dir/build.make CMakeFiles/cmTC_659ca.dir/build
+gmake[1]: Entering directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_659ca.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_659ca.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_659ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_659ca.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_659ca.dir/CheckFunctionExists.c.o -o cmTC_659ca  /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_659ca.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_659ca.dir/build.make:102: cmTC_659ca] Error 1
+gmake[1]: Leaving directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_659ca/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ed806/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed806.dir/build.make CMakeFiles/cmTC_ed806.dir/build
+gmake[1]: Entering directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed806.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_ed806.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ed806
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed806.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_ed806.dir/CheckFunctionExists.c.o -o cmTC_ed806  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -fortranlibs 
+cc: error: unrecognized command-line option ‘-fortranlibs’
+gmake[1]: *** [CMakeFiles/cmTC_ed806.dir/build.make:103: cmTC_ed806] Error 1
+gmake[1]: Leaving directory '/home/blade_master/pnx_dart/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ed806/fast] Error 2
+
+
+

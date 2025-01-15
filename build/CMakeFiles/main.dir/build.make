@@ -192,7 +192,7 @@ main: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.5.4d
 main: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.5.4d
 main: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.5.4d
 main: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0
-main: /usr/lib/libceres.so.2.0.0
+main: /usr/local/lib/libceres.a
 main: ../cameraOpen/64/libMvCameraControl.so
 main: ../lib/libserial_driver.so
 main: ../lib/libio_context.so
@@ -220,6 +220,18 @@ main: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
 main: /usr/lib/x86_64-linux-gnu/libglog.so.0.4.0
 main: /usr/lib/x86_64-linux-gnu/libunwind.so
 main: /usr/lib/x86_64-linux-gnu/libgflags.so.2.2.2
+main: /usr/lib/x86_64-linux-gnu/libspqr.so
+main: /usr/lib/x86_64-linux-gnu/libcholmod.so
+main: /usr/lib/x86_64-linux-gnu/libamd.so
+main: /usr/lib/x86_64-linux-gnu/libcamd.so
+main: /usr/lib/x86_64-linux-gnu/libccolamd.so
+main: /usr/lib/x86_64-linux-gnu/libcolamd.so
+main: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+main: /usr/lib/x86_64-linux-gnu/libtbb.so.12.5
+main: /usr/lib/x86_64-linux-gnu/liblapack.so
+main: /usr/lib/x86_64-linux-gnu/libblas.so
+main: /usr/lib/x86_64-linux-gnu/libf77blas.so
+main: /usr/lib/x86_64-linux-gnu/libatlas.so
 main: /opt/ros/humble/lib/liblibstatistics_collector.so
 main: /opt/ros/humble/lib/librcl.so
 main: /opt/ros/humble/lib/librmw_implementation.so

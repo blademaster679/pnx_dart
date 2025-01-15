@@ -315,6 +315,12 @@ void processFrames(){
             if (solver.solvePnP(light, rvec, tvec)){
                 distance = solver.getDistance(light, rvec, tvec);
                 angle = solver.getAngle(light, rvec, tvec);
+                if (angle > 0){
+                    angle = 1; // 1代表目标位于右侧，需要向左转，也就是逆时针转
+                }
+                else{
+                    angle = 0; // 0代表目标位于左侧，需要向右转，也就是顺时针转
+                }
             }
         }
         
