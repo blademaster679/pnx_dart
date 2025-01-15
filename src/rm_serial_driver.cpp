@@ -187,7 +187,12 @@ void RMSerialDriver::sendData(const rm_dart::message &msg)//飞镖需要对应�
     std::vector<uint8_t> data = toVector(packet);
 
     serial_driver_->port()->send(data);
-    std::cout << "Data sent" << std::endl;  
+    std::cout << "Data sent" << std::endl;
+    std::cout << "angle: " << packet.angle << std::endl;
+    std::cout << "distance: " << packet.distance_int8 << std::endl;
+    for (int i=0 ; i< data.size(); i++){
+      std::cout << "data[" << i << "]: " << data[i] << std::endl;
+    }
 
     
   } catch (const std::exception &ex) {
