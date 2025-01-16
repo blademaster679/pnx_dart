@@ -182,7 +182,7 @@ void RMSerialDriver::sendData(const rm_dart::message &msg)//飞镖需要对应�
     packet.distance_int8 = static_cast<uint8_t>(std::round(msg.distance));
     
 
-    crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));
+    // crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));
 
     std::vector<uint8_t> data = toVector(packet);
 

@@ -310,6 +310,8 @@ void processFrames(){
         }
         // cv::imshow("Detected lights", color_image);
         cv::imwrite("Detected_lights.jpg", color_image);
+        cv::imshow("Detected lights", color_image);
+        cv::waitKey(1);
         //cv::waitKey(1);
         for (const auto& light : lights){
             if (solver.solvePnP(light, rvec, tvec)){
