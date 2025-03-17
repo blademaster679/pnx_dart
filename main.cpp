@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <memory>
+#include <stdexcept>
 
 // Get config value
 #include "yaml-cpp/yaml.h"
@@ -59,6 +60,61 @@ rm_serial_driver::RMSerialDriver serialdriver; // 创建一个串口驱动器
 
 // 线程1：
 // 打开相机通过回调函数获取图像,下面四个函数为应用到的函数，修改imagecallbackex函数，其他三个直接copy的官方文档
+float getCameraGain(const std::string& configPath) {
+    try {
+        YAML::Node config = YAML::LoadFile(configPath);
+        // 检查是否存在 "detector" 节点
+        if (!config["detector"]) {
+            std::cerr << "配置文件中缺少 'detector' 节点" << std::endl;
+            return -1;
+        }
+        // 检查是否存在 "detector" 节点下的 "Gain" 键
+        if (!config["detector"]["Gain"]) {
+            std::cerr << "配置文件中 'detector' 节点下缺少 'Gain' 键" << std::endl;
+            return -1;
+        }
+        // 获取增益值（假设 YAML 中为浮点数）
+        float gainValue = config["detector"]["Gain"].as<float>();
+        return gainValue;
+    } catch (const YAML::BadFile& e) {
+        std::cerr << "无法打开配置文件: " << e.what() << std::endl;
+    } catch (const YAML::ParserException& e) {
+        std::cerr << "配置文件解析错误: " << e.what() << std::endl;
+    } catch (const YAML::Exception& e) {
+        // 捕获其他 YAML 相关异常
+        std::cerr << "读取配置文件时遇到错误: " << e.what() << std::endl;
+    }
+    return -1;  // 返回 -1 表示读取失败
+}
+
+float getCameraExposureTime(const std::string& configPath) {
+    try {
+        YAML::Node config = YAML::LoadFile(configPath);
+        // 检查是否存在 "detector" 节点
+        if (!config["detector"]) {
+            std::cerr << "配置文件中缺少 'detector' 节点" << std::endl;
+            return -1;
+        }
+        // 检查是否存在 "detector" 节点下的 "exposure_time" 键
+        if (!config["detector"]["exposure_time"]) {
+            std::cerr << "配置文件中 'detector' 节点下缺少 'exposure_time' 键" << std::endl;
+            return -1;
+        }
+        // 获取增益值（假设 YAML 中为浮点数）
+        float gainValue = config["detector"]["exposure_time"].as<float>();
+        return gainValue;
+    } catch (const YAML::BadFile& e) {
+        std::cerr << "无法打开配置文件: " << e.what() << std::endl;
+    } catch (const YAML::ParserException& e) {
+        std::cerr << "配置文件解析错误: " << e.what() << std::endl;
+    } catch (const YAML::Exception& e) {
+        // 捕获其他 YAML 相关异常
+        std::cerr << "读取配置文件时遇到错误: " << e.what() << std::endl;
+    }
+    return -1;  // 返回 -1 表示读取失败
+}
+
+
 void PressEnterToExit(void)
 {
     int c;
@@ -224,6 +280,22 @@ void videoGet()
             printf("MV_CC_RegisterImageCallBackEx fail! nRet [%x]\n", nRet);
             break;
         }
+        // 设置相机增益
+        float gain = getCameraGain("/home/blade_master/pnx_dart/config.yaml");
+        nRet = MV_CC_SetFloatValue(handle, "Gain", gain);
+        if (MV_OK != nRet)
+        {
+            printf("MV_CC_SetFloatValue fail! nRet [%x]\n", nRet);
+            break;
+        }
+        // 设置相机曝光
+        float exposure_time = getCameraExposureTime("/home/blade_master/pnx_dart/config.yaml");
+        nRet = MV_CC_SetExposureTime(handle, exposure_time);
+        if (MV_OK != nRet)
+        {
+            printf("MV_CC_SetExposureTime fail! nRet [%x]\n", nRet);
+            break;
+        }
         // 开始取流
         // start grab image
         nRet = MV_CC_StartGrabbing(handle);
@@ -305,14 +377,6 @@ void processFrames(){
         std::cout << "lights size: " << lights.size() << std::endl;
         // cv::imshow("binary_image", binary_image);
         // cv::waitKey(1);
-        for (const auto& light : lights){
-            cv::circle(color_image, light.center, light.width/2 , cv::Scalar(0, 0, 255), 2);
-        }
-        // cv::imshow("Detected lights", color_image);
-        cv::imwrite("Detected_lights.jpg", color_image);
-        cv::imshow("Detected lights", color_image);
-        cv::waitKey(1);
-        //cv::waitKey(1);
         for (const auto& light : lights){
             if (solver.solvePnP(light, rvec, tvec)){
                 distance = solver.getDistance(light, rvec, tvec);

@@ -29,7 +29,7 @@ struct SendPacket //飞镖需要对应更改
   
   // double distance;
   double angle;
-  uint8_t distance_int8;
+  double distance;
   
 
 

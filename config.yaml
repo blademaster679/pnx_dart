@@ -4,16 +4,18 @@ detector:
   classifier_threshold: 0.8
   light_min_ratio: 0.1
   armor_min_light_ratio: 0.7
+  Gain: 10.0
+  exposure_time: 10000.0
   ignore_classes:
     - "negative"
   pkg_path: "/home/pnx/training_code/detector"
   camera_matrix:
-  - [2.0648185341102839e+04, 0., 7.1950000000000000e+02]
-  - [0.,2.0648185341102839e+04, 5.3950000000000000e+02]
+  - [1.5139815274552124e+04, 0., 7.1950000000000000e+02]
+  - [0.,1.5139815274552124e+04, 5.3950000000000000e+02]
   - [0.0, 0.0, 1.0]
-  dist_coeff: [ -1.7060563917589891e-01, 4.1342212600269085e+02, 0., 0.,
-       -1.6644108983858529e+05 ]
-
+  dist_coeff: [ 4.1845870544699970e-01, -2.1401461717189935e+02, 0., 0.,
+       8.7292567629096928e+04 ]
+   
 serialdriver:
   timestamp_offset: 0.006
   device_name: /dev/ttyACM0

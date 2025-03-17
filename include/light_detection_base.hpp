@@ -3,6 +3,9 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 #include <iostream>
+#include <cmath>
+#include <cstdio>
+
 const int RED = 0;
 const int GREEN = 1;
 const int BLUE = 2;
