@@ -20,7 +20,7 @@ public:
 private:
     cv::Mat camera_matrix;
     cv::Mat distortion_coefficients;
-    static constexpr float CIRCLE_RADIUS = 27.5;
+    static constexpr float CIRCLE_RADIUS = 44;
     std::vector<cv::Point3f> circle_points;
 };
 

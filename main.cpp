@@ -114,6 +114,59 @@ float getCameraExposureTime(const std::string& configPath) {
     return -1;  // 返回 -1 表示读取失败
 }
 
+int getCameraWidth(const std::string& configPath) {
+    try {
+        YAML::Node config = YAML::LoadFile(configPath);
+        // 检查是否存在 "detector" 节点
+        if (!config["detector"]) {
+            std::cerr << "配置文件中缺少 'detector' 节点" << std::endl;
+            return -1;
+        }
+        // 检查是否存在 "detector" 节点下的 "width" 键
+        if (!config["detector"]["width"]) {
+            std::cerr << "配置文件中 'detector' 节点下缺少 'width' 键" << std::endl;
+            return -1;
+        }
+        // 获取图像宽度（假设 YAML 中为整型数）
+        int width = config["detector"]["width"].as<int>();
+        return width;
+    } catch (const YAML::BadFile& e) {
+        std::cerr << "无法打开配置文件: " << e.what() << std::endl;
+    } catch (const YAML::ParserException& e) {
+        std::cerr << "配置文件解析错误: " << e.what() << std::endl;
+    } catch (const YAML::Exception& e) {
+        // 捕获其他 YAML 相关异常
+        std::cerr << "读取配置文件时遇到错误: " << e.what() << std::endl;
+    }
+    return -1;  // 返回 -1 表示读取失败
+}
+
+int getCameraHeight(const std::string& configPath) {
+    try {
+        YAML::Node config = YAML::LoadFile(configPath);
+        // 检查是否存在 "detector" 节点
+        if (!config["detector"]) {
+            std::cerr << "配置文件中缺少 'detector' 节点" << std::endl;
+            return -1;
+        }
+        // 检查是否存在 "detector" 节点下的 "height" 键
+        if (!config["detector"]["height"]) {
+            std::cerr << "配置文件中 'detector' 节点下缺少 'height' 键" << std::endl;
+            return -1;
+        }
+        // 获取图像高度（假设 YAML 中为整型数）
+        int height = config["detector"]["height"].as<int>();
+        return height;
+    } catch (const YAML::BadFile& e) {
+        std::cerr << "无法打开配置文件: " << e.what() << std::endl;
+    } catch (const YAML::ParserException& e) {
+        std::cerr << "配置文件解析错误: " << e.what() << std::endl;
+    } catch (const YAML::Exception& e) {
+        // 捕获其他 YAML 相关异常
+        std::cerr << "读取配置文件时遇到错误: " << e.what() << std::endl;
+    }
+    return -1;  // 返回 -1 表示读取失败
+}
 
 void PressEnterToExit(void)
 {
@@ -294,6 +347,23 @@ void videoGet()
         if (MV_OK != nRet)
         {
             printf("MV_CC_SetExposureTime fail! nRet [%x]\n", nRet);
+            break;
+        }
+        // 设置相机分辨率
+        //设置图像宽度
+        int width = getCameraWidth("/home/blade_master/pnx_dart/config.yaml");
+        nRet = MV_CC_SetWidth(handle, exposure_time);
+        if (MV_OK != nRet)
+        {
+            printf("MV_CC_SetWidth fail! nRet [%x]\n", nRet);
+            break;
+        }
+        //设置图像高度
+        int height = getCameraHeight("/home/blade_master/pnx_dart/config.yaml");
+        nRet = MV_CC_SetHeight(handle, exposure_time);
+        if (MV_OK != nRet)
+        {
+            printf("MV_CC_SetHeight fail! nRet [%x]\n", nRet);
             break;
         }
         // 开始取流

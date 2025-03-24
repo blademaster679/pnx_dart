@@ -6,6 +6,8 @@ detector:
   armor_min_light_ratio: 0.7
   Gain: 10.0
   exposure_time: 10000.0
+  width: 1440
+  height: 1080
   ignore_classes:
     - "negative"
   pkg_path: "/home/pnx/training_code/detector"
